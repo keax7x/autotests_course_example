@@ -7,7 +7,13 @@
 # 4 --> 4
 
 def sum_digits(num):
-    # Здесь нужно написать код
+    our_sum = []
+    if num > 0:
+        for b in str(num):
+            our_sum.append(int(b))
+        our_sum = (sum(our_sum))
+    else:
+        print('введи положительное число')
     return our_sum
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
