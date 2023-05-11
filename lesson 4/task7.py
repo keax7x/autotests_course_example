@@ -3,9 +3,9 @@
 # [1, 0, 1, 2, 0, 1, 3]  => [1, 1, 2, 1, 3, 0, 0]
 
 def move_zeros(lst):
-    for i in lst.copy():
-        if i == 0:
-            lst.pop(lst.index(i))  # удаляем 0 по индексу
+    for a in lst.copy():
+        if a == 0:
+            lst.pop(lst.index(a))  # удаляем 0 по индексу
             lst.append(0)  # добавляем 0 в конец
     return lst
 
