@@ -10,8 +10,8 @@ def sum_digits(num):
     our_sum = []
     if num > 0:
         for b in str(num):
-            our_sum.append(int(b))
-        our_sum = (sum(our_sum))
+            our_sum.append(int(b))  # делаем список из целых числен
+        our_sum = (sum(our_sum))  # суммируем числа из полученного списка
     else:
         print('введи положительное число')
     return our_sum
