@@ -14,7 +14,24 @@
 
 
 def scrabble(word):
-    # Здесь нужно написать код
+    """
+    функция, которая получает строку со словом и ситает очки за каждую букву в слове
+    :param word: сторока с буквами (слово)
+    :return: points: возвращаем число - сумму очков
+    """
+    points = 0
+    # ниже формируем словарь из условия задчи, где клю - буква, сколько стоит - значение ключа
+    temp_dict = {}
+    temp_dict.update(dict.fromkeys('авеёинорст', 1))
+    temp_dict.update(dict.fromkeys('дклмпу', 2))
+    temp_dict.update(dict.fromkeys('бгья', 3))
+    temp_dict.update(dict.fromkeys('йы', 4))
+    temp_dict.update(dict.fromkeys('жзхцч', 5))
+    temp_dict.update(dict.fromkeys('фшэю', 8))
+    temp_dict.update(dict.fromkeys('щ', 10))
+    temp_dict.update(dict.fromkeys('ъ', 15))
+    for bukva in word:
+        points += temp_dict[bukva]  # при каждой итерации по букве получаем значение ключа из словаря и + в points
     return points
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
